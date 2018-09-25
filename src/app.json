@@ -1,0 +1,18 @@
+{
+	"pages":[
+
+		"pages/result/index",
+		"pages/introduce/index",
+		"pages/guid/index",
+		"pages/home/index",
+		"pages/card/index"
+	],
+	"window":{
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "white",
+		"navigationBarTitleText": "PDP性格测试",
+		"navigationBarTextStyle": "black",
+		"disableScroll": true
+	},
+	"debug": true
+}

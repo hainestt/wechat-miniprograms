@@ -1,0 +1,64 @@
+.card-item {
+	display: block;
+}
+
+.header {
+	width:480px;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	margin: 150px auto;
+	color: #fff;
+	background: url('../../assets/title-header.png') center top / cover no-repeat;
+
+	.title {
+		flex: 1;
+		font-size: 57px;
+		text-shadow: 1px 1px 1px 4px red;
+	}
+	.des {
+		flex: 1;
+		font-size: 47px;
+		margin-top: 30px;
+		text-align: center;
+	}
+}
+
+.icon-wrapper {
+	.icon {
+		top: 30%;
+		box-shadow: none;
+		background: transparent;
+		&:after {
+			border-radius: 50%;
+			border: 9px solid #fff;
+		}
+	}
+
+	.tiger {
+		left: 150px;
+	}
+
+	.owl {
+		left: auto;
+		right: 150px;
+	}
+
+	.koala {
+		left: 50%;
+		top: 45%;
+		margin-left: -65px;
+	}
+
+	.peacock {
+		left: 150px;
+		top: 60%;
+	}
+
+	.chameleon {
+		left: auto;
+		right: 150px;
+		top: 60%;
+	}
+
+}

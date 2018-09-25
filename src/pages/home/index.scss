@@ -1,0 +1,116 @@
+
+.card-wrapper {
+	color: #352b2e;
+
+	swiper-item {
+		position: relative;
+	}
+
+	.item {
+		padding-top: 60px;
+	}
+
+	.title {
+		font-weight: bold;
+	}
+
+	.btn-bigger {
+		bottom: 80px;
+	}
+
+	.view-text {
+		font-size: 32px;
+	}
+
+	.button {
+		background: transparent;
+		color: #fff;
+		font-size: 32px;
+		&:after {
+			border-style: none;
+		}
+	}
+
+	.left-item {
+		width: 250px;
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		margin-left: -100px;
+		font-size: 30px;
+	}
+
+	.radio-group {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 30px 0 0 30px;
+
+		.radio {
+			height: 85px;
+			line-height: 85px;
+			font-size: 36px;
+			margin-bottom: 10px;
+
+			radio {
+				width: 60px;
+			}
+		}
+	}
+
+
+	// radio 复写
+	radio {
+		.wx-radio-input {
+			width: 40px;
+			height: 40px;
+
+			&.wx-radio-input-checked{
+				border: none;
+				background: red;
+
+				&:after {
+					border: none;
+					background: red;
+				}
+			}
+		}
+	}
+
+	.header {
+		height: 150px;
+		overflow: hidden;
+		margin: 0 -20px 50px;
+		position: relative;
+		border-bottom: 1px solid #e9e9e9;
+	}
+
+	.title {
+		padding:0 30px;
+	}
+
+
+	.btn {
+		width: 480px;
+		font-size: 30px;
+		border-style: none;
+		color: #fff;
+		margin-top: 50px;
+
+		&.blue {
+			background: #75b1f1;
+		}
+
+		&::after {
+			border: none;
+		}
+	}
+
+	.btn-grounp {
+		position: absolute;
+		bottom: 30px;
+	}
+
+}
+
+

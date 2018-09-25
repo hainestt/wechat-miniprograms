@@ -1,0 +1,124 @@
+.container {
+	height: 100%;
+	overflow: hidden;
+	background: #fff;
+	.box {
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		padding: 40px;
+		display: none;
+	}
+}
+
+.header {
+	min-height: 450px;
+	margin: -40px -40px 0;
+
+	$obj:
+		('tiger', 'header-tiger.png'),
+		('owl', 'header-owl.png'),
+		('koala', 'header-koala.png'),
+		('peacock', 'header-peacock.png'),
+		('chameleon', 'header-chameleon.png');
+
+	@each $name, $url in $obj {
+		&.#{$name} {
+			background: url('../../assets/#{$url}') center top / cover no-repeat;
+		}
+	}
+}
+
+.title {
+	font-size: 36px;
+	margin: 35px 0;
+	color: #000;
+	font-weight: bold;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.content {
+	height: calc(100% - 550px);
+	padding-bottom: 135px;
+
+	font-size: 32px;
+	color: #362b2f;
+	position: relative;
+
+	.detail {
+		line-height: 60px;
+	}
+
+	.des,
+	.character,
+	.advantage,
+	.weakness,
+	.behaviour,
+	.summarize {
+		margin-bottom: 30px;
+	}
+
+	.b-title {
+		margin-bottom: 15px;
+	}
+
+	.b-des {
+		position: relative;
+		padding-left: 20px;
+		&:before {
+			content: '•';
+			position: absolute;
+			left: -4px;
+			top: 50%;
+			transform: translateY(-50%);
+
+		}
+	}
+}
+
+.footer {
+	background: none;
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	bottom: 15px;
+	left: 50px;
+	right: 50px;
+	margin-bottom: -40px;
+
+	.footer-invite {
+		border-right: 1px solid #e0e0e0;
+	}
+
+	.footer-btn {
+		// flex: 1;
+		width: 250px;
+		height: 75px;
+		font-size: 32px;
+		border-radius: 14px;
+
+		&:after {
+			border-style: none;
+		}
+	}
+}
+
+// .scroll-view {
+// 	position: absolute;
+// 	top: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	right: 0;
+// 	min-height: 480px;
+// 	border: 1px solid red;
+// }
+
+.canvas {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #fff;
+	position: fixed;
+	left: -900px;
+}

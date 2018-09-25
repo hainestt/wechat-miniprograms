@@ -1,0 +1,23 @@
+<view class="container">
+	<view class="card-wrapper">
+		<view class="card-item">
+			<view class="header">
+			</view>
+
+			<view class="icon-wrapper">
+				<view class="icon tiger"></view>
+				<view class="icon koala"></view>
+				<view class="icon owl"></view>
+
+				<view class="icon peacock"></view>
+				<view class="icon chameleon"></view>
+			</view>
+
+			<view class="btn btn-round">
+				<navigator url="/pages/guid/index" hover-class="hover-navigator">进入</navigator>
+			</view>
+
+			<view class="footer"></view>
+		</view>
+	</view>
+</view>

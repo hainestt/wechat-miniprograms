@@ -1,0 +1,135 @@
+view, swiper, button {
+	box-sizing: border-box;
+}
+
+page {
+	height: 100%;
+	color: #333;
+	font-family: 'PingFang SC', Arial, Helvetica,'Microsoft YaHei', sans-serif;
+	font-weight: normal;
+}
+
+.container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	background: #fff;
+	position: relative;
+}
+
+.card-wrapper {
+	position: relative;
+	flex: 1;
+	padding-top: 50px;
+
+	.card-item {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		display: flex;
+		flex-direction: row;
+		height: 100%;
+		background: url('./assets/bg.png') center top / cover no-repeat;
+
+	}
+
+	.item {
+		position: absolute;
+		top: 150px;
+		bottom: 150px;
+		left: 40px;
+		right: 40px;
+		background: #fff;
+		border-radius: 10px;
+	}
+}
+
+.icon {
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	float: right;
+	position: absolute;
+	top: 25px;
+	box-shadow: 0 -2px 30px 0 rgba(#e9e9e9, .8);
+	z-index: 1;
+
+	&:after {
+		content: ' ';
+		display: block;
+		width: 130px;
+		height: 130px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -65px;
+		margin-left: -65px;
+	}
+
+	$obj:
+		('tiger', 20, 1, 'tiger.png'),
+		('koala', 130,1, 'koala.png'),
+		('owl', 240,2, 'owl.png'),
+		('peacock', 340,1, 'peacock.png'),
+		('chameleon', 455,1, 'chameleon.png');
+
+	@each $name, $l, $z, $url in $obj {
+		&.#{$name} {
+			left: $l + px;
+			z-index: $z;
+			&:after {
+				background: url('./assets/#{$url}') center top / cover no-repeat;
+			}
+		}
+	}
+}
+
+.color-text {
+	$obj:
+		('tiger', #e35525),
+		('koala', #3a5ddc),
+		('owl', #1e8e25),
+		('peacock', #7059ff),
+		('chameleon', #678e0c);
+
+	@each $name, $col in $obj {
+		&.#{$name} {
+			color: $col;
+		}
+	}
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 120px;
+	background: url('./assets/cloud.png') center top / 100% 100% no-repeat;
+}
+
+.btn-round {
+	width: 360px;
+	height: 80px;
+	line-height: 80px;
+	position: absolute;
+	bottom: 150px;
+	left: 50%;
+	margin-left: -180px;
+	text-align: center;
+	border-radius: 40px;
+	background: rgba(#6ea9f0, 1);
+	box-shadow: 1px 1px 20px 2px rgba(#6ea9f0, .5);
+	border: 5px solid #fff;
+	color: #fff;
+}
+
+.btn-bigger{
+	bottom: 50px;
+	width: 480px;
+	border-style: none;
+	margin-left: -240px;
+}

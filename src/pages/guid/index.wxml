@@ -1,0 +1,16 @@
+<view class="container">
+	<view class="card-wrapper">
+		<view class="card-item">
+			<view class="item">
+				<view class="content">
+					<text class="strong">PDP事业优势诊断系统</text>
+					<text class="thin">(Professional DynaMetric Programs),在国内俗称五种动物性格测试。它是一个用来衡量个人的行为特质活力、动能、压力、精力及能量变动情况的系统。是全球涵盖范围最广、精准度最高的管理工具。选项没有对错之分，回答问题的时候请根据自身的实际情况作答。结果将确定你的气质类型，分析你的性格优势，展现一个人天赋中最擅长的做事风格，并且区分了天生本我、工作中的我及他人眼中的我。</text>
+				</view>
+				<view class="btn-round btn-bigger">
+					<navigator url="/pages/home/index" hover-class="className">开始测试（共30题）</navigator>
+				</view>
+			</view>
+			<view class="footer"></view>
+		</view>
+	</view>
+</view>

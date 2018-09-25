@@ -1,0 +1,54 @@
+<view class="container">
+	<view class="card-wrapper">
+		<view class="card-item">
+		<!--<swiper skip-hidden-item-layout current="{{currentIndex}}" bindchange="handleChange" bindanimationfinish="hadnleAnimationEnd"> -->
+			<!--<block wx:for="{{questions}}" wx:key="qa" wx:for-item="qa" data-item="{{qa}}"> -->
+				<!---<swiper-item> -->
+					<view class="item-wrapper">
+						<view class="item">
+							<!--
+							<view class="header">
+								<view class="icon tiger"></view>
+								<view class="icon koala"></view>
+								<view class="icon owl"></view>
+
+								<view class="icon peacock"></view>
+								<view class="icon chameleon"></view>
+							</view>
+							-->
+
+							<text class="title">{{qa.title}}</text>
+							<radio-group class="radio-group"  data-item="{{qa}}" data-item-index="{{currentIndex}}" bindchange="handleRadioChange">
+								<label class="radio" wx:for="{{qa.list}}" wx:key="qaItem" wx:for-item="qaItem" >
+									<radio value="{{qaItem.value}}" checked="{{qa.checked}}"/>
+									<text>{{qaItem.name}}</text>
+								</label>
+							</radio-group>
+
+							<view class="btn-round btn-bigger">
+								<view class="view-text" wx:if="{{!isSubmitShow}}" bindtap="handleNext">下一题</view>
+								<button wx:if="{{isSubmitShow}}" class="button" open-type="getUserInfo" type="default" size="defaultSize" bindgetuserinfo="handleGetUserInfo">提交</button>
+							</view>
+
+							<view class="left-item">
+								<text>(第{{currentIndex+1}}题/共30题)</text>
+							</view>
+
+						</view>
+					</view>
+				<!-- </swiper-item> -->
+			<!--</block>-->
+		<!-- </swiper> -->
+		</view>
+
+	</view>
+
+	<view class="footer"></view>
+
+	<!---
+	<view class="ctrl-wrapper">
+		<button type="primary" size="defaultSize" loading="loading" plain="{{plain}}" disabled="disabled" bindtap="defaultTap" hover-class="defaultTap">下一题</button>
+	</view>
+	-->
+
+</view>

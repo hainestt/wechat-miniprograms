@@ -1,0 +1,37 @@
+<view class="container">
+
+	<view class="box">
+		<view class="header {{flag}}"></view>
+		<view class="title"><text>{{result.title}}</text> <text class="color-text {{flag}}">{{result.name}}</text></view>
+		<view class="content">
+			<text class="detail">详细分析：</text>
+			<scroll-view scroll-y style="height:100%">
+				<view class="des">{{result.des}}</view>
+				<view class="character">{{result.character}}</view>
+				<view class="advantage">{{result.advantage}}</view>
+				<view class="weakness">{{result.weakness}}</view>
+				<view class="behaviour">
+					<view class="b-title">{{result.behaviour.title}}</view>
+					<view class="b-des" wx:for="{{result.behaviour.des}}" wx:for-item="item" wx:key="index">
+						<text>{{item}}</text>
+					</view>
+				</view>
+				<view class="summarize">
+					{{result.summarize}}
+				</view>
+			</scroll-view>
+		</view>
+
+		<view class="footer">
+			<button class="footer-btn footer-invite" size="{{defaultSize}}" type="warn" open-type="share" bindtap="onShareAppMessage">分享好友</button>
+			<button class="footer-btn footer-card" size="{{defaultSize}}" type="primary" bindtap="handleCreateCard">生成卡片</button>
+
+			<!--<navigator class="footer-btn footer-card" open-type="navigate" url="/pages/card/index?title={{result.name}}&flag={{flag}}">生成卡片</navigator> -->
+
+		</view>
+	</view>
+
+	<!--<canvas wx-else="showCanvas" style="width:{{cWidth}}px; height: {{cHeight}}px;" canvas-id="generateCard" class="canvas"></canvas>
+	-->
+</view>
+

@@ -1,0 +1,4 @@
+<view class="container">
+	<canvas style="width:{{cWidth}}px; height: {{cHeight}}px;" canvas-id="generateCard" class="canvas"></canvas>
+</view>
+
